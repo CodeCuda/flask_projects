@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <h1>Hi, {{ current_user.username }}!</h1>
+    <h3>{{ welcome_phrase }}</h3>
+     <td><img src="{{ image }}"></td>
+    <form action="" method="post" enctype="multipart/form-data" novalidate>
+        {{ form.hidden_tag() }}
+        <p>{{ form.submit() }}</p>
+        <p>{{ form.submit_eyes() }}</p>
+        <p>{{ form.default() }}</p>
+    </form>
+{% endblock %}
